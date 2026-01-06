@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SalesExecutive.UI.Inquiries">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_nag45">
+
+
+
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <ImageView
+                    app:tint="@color/white"
+                    android:id="@+id/backBt"
+                    android:padding="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:src="@drawable/ic_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Enquiries"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_toRightOf="@+id/backBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+           android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:weightSum="4"
+            android:visibility="gone"
+            android:id="@+id/sagmentedGroup"
+            app:borderColor="@color/colorDarkGray"
+            android:dividerPadding="@dimen/margin_8"
+            app:rippleColor="@color/colorPrimary"
+            app:selectedBackground="@color/colorPrimaryDark"
+            app:ripple="true"
+            app:radius="0dp"
+            app:background="@android:color/white"
+            app:dividerWidth="1dp"
+            android:showDividers="beginning"
+            android:elevation="2dp"
+            app:borderWidth="1dp"
+            android:layout_height="@dimen/margin_nag35">
+
+            <com.addisonelliott.segmentedbutton.SegmentedButton
+                android:layout_width="match_parent"
+                app:text="Domestic"
+                app:textSize="@dimen/margin_13"
+                app:selectedTextColor="@android:color/white"
+                app:textColor="@color/colorDarkGray"
+                android:layout_weight="1"
+                android:layout_height="@dimen/margin_nag35" />
+
+            <com.addisonelliott.segmentedbutton.SegmentedButton
+                android:layout_width="match_parent"
+                app:text="International"
+                app:textSize="@dimen/margin_13"
+                android:layout_weight="1"
+                app:selectedTextColor="@android:color/white"
+                app:textColor="@color/colorDarkGray"
+                android:layout_height="@dimen/margin_nag35" />
+
+
+        </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+
+
+        <RelativeLayout
+            android:layout_above="@+id/sagmentedGroupMoveType"
+            android:layout_below="@+id/sagmentedGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSearch"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/margin_20"
+                app:cardCornerRadius="@dimen/margin_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/laySearch_main"
+
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/laySearch"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:id="@+id/ivsearch"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/search"
+                            android:layout_width="@dimen/margin_nag20"
+                            android:layout_height="@dimen/margin_nag20"/>
+
+
+                        <EditText
+                            android:layout_toRightOf="@+id/ivsearch"
+                            android:maxLines="1"
+                            android:id="@+id/etFilter"
+                            android:imeOptions="actionDone"
+                            android:hint="Search Enquiry.."
+                            android:layout_toLeftOf="@+id/serchLay"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:background="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp" />
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:id="@+id/serchLay"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/ivClear"
+                                android:padding="@dimen/margin_5"
+                                android:layout_marginRight="@dimen/margin_5"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/clear"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="@dimen/margin_nag25"
+                                android:layout_height="@dimen/margin_nag25"/>
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reclycalView"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/cardSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+        </RelativeLayout>
+
+        <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:weightSum="4"
+            android:id="@+id/sagmentedGroupMoveType"
+            app:borderColor="@color/colorDarkGray"
+            android:dividerPadding="@dimen/margin_8"
+            app:rippleColor="@color/colorPrimary"
+            app:selectedBackground="@color/colorPrimaryDark"
+            app:ripple="true"
+            app:radius="0dp"
+            app:background="@android:color/white"
+            app:dividerWidth="1dp"
+            android:showDividers="beginning"
+            android:elevation="2dp"
+            app:borderWidth="1dp"
+            android:layout_height="@dimen/margin_nag35">
+
+            <com.addisonelliott.segmentedbutton.SegmentedButton
+                android:layout_width="match_parent"
+                app:text="House Hold Goods"
+                app:textSize="@dimen/margin_13"
+                app:selectedTextColor="@android:color/white"
+                app:textColor="@color/colorDarkGray"
+                android:layout_weight="1"
+                android:layout_height="@dimen/margin_nag35" />
+
+            <com.addisonelliott.segmentedbutton.SegmentedButton
+                android:layout_width="match_parent"
+                app:text="Office Goods"
+                app:textSize="@dimen/margin_13"
+                android:layout_weight="1"
+                app:selectedTextColor="@android:color/white"
+                app:textColor="@color/colorDarkGray"
+                android:layout_height="@dimen/margin_nag35" />
+
+
+        </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+    </RelativeLayout>
+</layout>

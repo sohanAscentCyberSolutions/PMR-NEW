@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cornerRadius="0dp"
+        android:layout_margin="@dimen/margin_15"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@+id/ivDelete"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_margin="@dimen/margin_8"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:foregroundTint="@color/colorDarkGray"
+                    android:textColor="@color/colorDarkGray"
+                    app:boxStrokeColor="@color/colorDarkGray"
+                    android:textColorHint="@color/colorDarkGray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:maxLines="1"
+                        android:id="@+id/etRoomName"
+                        android:text=""
+                        android:focusable="false"
+                        android:textSize="@dimen/margin_13"
+                        android:foregroundTint="@color/colorDarkGray"
+                        android:textColor="@color/colorDarkGray"
+                        android:textColorHint="@color/colorDarkGray"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:hint="Room Name" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_margin="@dimen/margin_8"
+                    android:id="@+id/ivDelete"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/delete"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"/>
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_margin="@dimen/margin_5"
+                android:orientation="vertical"
+                android:id="@+id/holderArtical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addMore"
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_10"
+                android:backgroundTint="@color/colorAccent"
+                android:text="add more"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_nag35"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

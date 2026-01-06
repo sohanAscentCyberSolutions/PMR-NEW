@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SalesExecutive.UI.UploadDocumentInquiries">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_nag45">
+
+
+
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <ImageView
+                    app:tint="@color/white"
+                    android:id="@+id/backBt"
+                    android:padding="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:src="@drawable/ic_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Upload Documents"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_toRightOf="@+id/backBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_margin="@dimen/margin_15"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/placeHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <Button
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="Add More"
+                    android:id="@+id/btAddmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <View
+                    android:background="@color/grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"/>
+
+
+                <Button
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/grey"
+                    android:text="Save Documents"
+                    android:id="@+id/btSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+</layout>

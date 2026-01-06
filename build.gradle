@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io"
+            credentials {
+                username = "sohanAscentCyberSolutions"
+                password = "jp_lh7fc38p4no87v7ej5rcsflagc"
+            }}
+        maven {
+            url "https://jcenter.bintray.com"
+            credentials {
+                username = "sohanAscentCyberSolutions"
+                password = "jp_lh7fc38p4no87v7ej5rcsflagc"
+            }
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.7.2'
+        classpath "io.realm:realm-gradle-plugin:10.15.1"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://jcenter.bintray.com"
+            credentials {
+                username = "sohanAscentCyberSolutions"
+                password = "jp_lh7fc38p4no87v7ej5rcsflagc"
+            }
+        }
+        maven { url "https://jitpack.io"
+            credentials {
+                username = "sohanAscentCyberSolutions"
+                password = "jp_lh7fc38p4no87v7ej5rcsflagc"
+            }
+        }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:visibility="visible"
+                android:id="@+id/layTicketDetails"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Job Number :"
+                        android:id="@+id/tvTicketNo"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView android:textSize="13dp"
+                        android:id="@+id/tvJobNumber"
+                        android:text="Category : "
+                        android:textColor="@android:color/black"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Loading Date :"
+                        android:id="@+id/tvSubCategory"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView android:textSize="13dp"
+                        android:id="@+id/tvLoadingDate"
+                        android:textColor="@android:color/black"
+                        android:layout_weight="1"
+                        android:text="Priority"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Prepared By : "
+                        android:id="@+id/tvSource"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView android:textSize="13dp"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tvPreparedBy"
+                        android:text="Reported by"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Account : "
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Status : "
+                        android:id="@+id/tvAccount"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Shipper Name : "
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Status : "
+                        android:id="@+id/tvShipperName"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Mobile Number:"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Status : "
+                        android:id="@+id/tvMobileNumber"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Origin Address : "
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Status : "
+                        android:id="@+id/tvOriginAddress"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Destination Address : "
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:text="Status : "
+                        android:id="@+id/tvDestiAddress"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_gravity="right"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textSize="@dimen/margin_13"
+                    android:text="View More"
+                    android:id="@+id/btViewMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_nag35"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reclycalView"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/cardSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:layout_margin="@dimen/margin_10"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="@dimen/margin_13"
+                        android:textColor="@color/black"
+                        android:text="Supervisor Signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/ivSupervisorSignature"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_120" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="@dimen/margin_13"
+                        android:textColor="@color/black"
+                        android:text="Shipper Signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/ivShipperSign"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_120" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</layout>

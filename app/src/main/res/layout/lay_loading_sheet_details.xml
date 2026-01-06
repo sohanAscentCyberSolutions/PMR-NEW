@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp">
+
+    <LinearLayout
+        tools:context=".Fragments.Request_Details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="@dimen/margin_10"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_weight="2"
+            android:text="Loading Sheet Details"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Job Number:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/jobNumber"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Loading Date:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/loadingDate"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Prepared By:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/preparedBy"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Transport/Shipping Co:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/transportShippingCo"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Shipping/Custom/Truck Seal No:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/ShippingCustomTruckSealNo"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Truck Container No:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/truckContainerNo"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Lift Van Nos:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/liftVanNos"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_toLeftOf="@+id/tvViewMore"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Crate(s) Nos:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/crateNos"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Total Packets:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/totalPackets"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Account:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/account"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Shipper Name:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/shipperName"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Mobile Number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/mobileNumber"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text=""
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight=".5"
+                android:textSize="@dimen/margin_13"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Lift van sizes:"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_weight="1.5"
+                android:id="@+id/Liftvansizes"
+                android:textSize="@dimen/margin_13"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkGray"
+                android:text="City Name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Origin Address:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/originAddress"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text="City Name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Destination Address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/destinationAddress"
+                    android:textSize="@dimen/margin_13"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkGray"
+                    android:text=""
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btClose"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</layout>

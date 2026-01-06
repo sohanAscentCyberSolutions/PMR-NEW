@@ -1,0 +1,6 @@
+id,active,created_on,legal_name,primary_organization,trade_name,updated_on,address_id,created_by_id,cin_llpin,company_code,company_logo_file_name,company_logo_file_path,pan_no,website
+1,1,"2021-08-28 11:11:00","Tera Software Limited",1,TSL,NULL,201,1,U63031DL2006PTC148024,TS,PMR-logo.png,document/company/8ygrp8zD5lJvAW2.png,ABCT1234AB,www.terasoftware.com
+2,1,"2021-04-08 13:25:51","PM Relocations Private Limited",0,PMR,"2022-03-25 13:05:14",140,1,U63031DL2006PTC148024,PM,PMR-logo.png,document/company/8ygrp8zD5lJvAW2.png,AADCP8491Q,www.pmrelocations.com
+3,1,"2022-07-15 11:00:00","PM Relocation LLP",0,PMRGO,NULL,829,1,AAG-7648,PL,PMR-logo.png,document/company/8ygrp8zD5lJvAW2.png,AADCP8491Q,www.pmrgo.com
+4,1,"2022-07-15 11:00:00","Right Star Relocations LLP",0,Rightstar,NULL,830,1,AAK-0748,RS,PMR-logo.png,document/company/8ygrp8zD5lJvAW2.png,AADCP8491Q,www.rightstarrelocations.com
+5,1,"2022-07-15 11:00:00","PM Packers & Movers Pvt. Ltd",0,PMPackers,NULL,831,1,U74950DL1993PTC129064,PP,PMR-logo.png,document/company/8ygrp8zD5lJvAW2.png,AADCP8491Q,www.pmpackers.com

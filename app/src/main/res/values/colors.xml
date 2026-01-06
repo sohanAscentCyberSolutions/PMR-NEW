@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0074bd</color>
+    <color name="colorPrimaryDark">#0074bd</color>
+    <color name="colorAccent">#B70E21</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimaryVariant">@color/purple_700</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <!-- Secondary brand color. -->
+    <color name="colorSecondary">@color/teal_200</color>
+    <color name="colorSecondaryVariant">@color/teal_700</color>
+    <color name="colorOnSecondary">@color/black</color>
+
+    <color name="green">#00D219</color>
+    <color name="pink">#c2185b</color>
+    <color name="grey">#707070</color>
+    <color name="light_grey">#c5c5c5</color>
+    <color name="v_light_grey">#F0F0F0</color>
+
+    <color name="splash">#14bef0</color>
+    <color name="text_color">#1686d9</color>
+    <color name="bg_color">#f5f5f5</color>
+    <color name="button_bg">#008577</color>
+
+    <color name="colorAccentTrans">#333F51B5</color>
+    <color name="placeholder_bg">#dddddd</color>
+
+    <color name="silver">#c0c0c0</color>
+    <color name="colorDarkGray">#566573</color>
+    <color name="lightGray">#f2f9ff</color>
+
+</resources>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/margin_20"
+        android:text="1"
+        android:id="@+id/itemNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/layDt"
+        android:layout_toRightOf="@+id/itemNo"
+        android:paddingBottom="@dimen/margin_5"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_8"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".23"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:text="CR. Ref:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_weight=".77"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/crRef"
+                    android:textColor="@color/grey"
+                    android:textSize="13dp"
+                    android:text="Root for west pune"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_weight=".23"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:text="Articles:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".77"
+                android:textColor="@color/grey"
+                android:textSize="13dp"
+                android:text="GST No :"
+                android:id="@+id/articles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_weight=".23"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:text="Packed By:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".77"
+                android:textColor="@color/grey"
+                android:textSize="13dp"
+                android:text="GST No :"
+                android:id="@+id/packedBy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layDetails"
+        android:padding="@dimen/margin_10"
+        android:background="@color/colorAccentTrans"
+        android:layout_below="@+id/layDt"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:text="Value:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/value"
+                    android:textColor="@color/grey"
+                    android:textSize="13dp"
+                    android:text="Root for west pune"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <View
+           android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_weight=".5"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:text="Condition At Origin:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
+                android:textColor="@color/grey"
+                android:textSize="13dp"
+                android:text="GST No :"
+                android:id="@+id/conditionAtOrigin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"/>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".23"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:text="Attachment : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivAttachment"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:clickable="false"
+                    android:text="Loading"
+                    android:id="@+id/cbLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <CheckBox
+                    android:clickable="false"
+                    android:text="Inward"
+                    android:id="@+id/cbInward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <CheckBox
+                    android:clickable="false"
+                    android:text="Outward"
+                    android:id="@+id/cbOutwardg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <CheckBox
+                    android:clickable="false"
+                    android:text="Unloading"
+                    android:id="@+id/cbUnloading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_marginLeft="@dimen/sp_18"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"/>
+
+
+</RelativeLayout>

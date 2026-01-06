@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:paddingBottom="@dimen/margin_8"
+    android:paddingTop="@dimen/margin_8"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:weightSum="3"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_nag35">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/margin_13"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:background="@color/v_light_grey"
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:textColor="@color/black"
+            android:textSize="@dimen/margin_13"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="E-Mail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:background="@color/v_light_grey"
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tvContactNo"
+            android:textColor="@color/black"
+            android:textSize="@dimen/margin_13"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Contact No"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/v_light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:tag="@string/tag_menu"
+            app:footer="@layout/duo_view_footer1"
+            app:header="@layout/duo_view_header1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:tag="@string/tag_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_back"
+                android:foregroundTint="@color/white"
+                theme="@style/MyToolbarStyle"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/white"/>
+
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_above="@+id/sagmentedGroup"
+                android:id="@+id/dataView"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:id="@+id/laySearch_main"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50">
+
+                        <RelativeLayout
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_alignParentTop="true"
+                            android:paddingRight="@dimen/dp_10"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:id="@+id/laySearch"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_nag45">
+
+
+                            <EditText
+                                android:background="@android:color/transparent"
+                                android:drawableTint="@color/light_grey"
+                                android:drawableRight="@drawable/ic_loupe"
+                                android:maxLines="1"
+                                android:id="@+id/etFilter"
+                                android:imeOptions="actionDone"
+                                android:hint="Search Request...."
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_nag45" />
+
+<View
+    android:layout_alignParentBottom="true"
+    android:background="@color/grey"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_1"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reclycalView"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        android:layoutAnimation="@anim/layout_animation_fall_down"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/laySearch_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/noRecored"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:weightSum="4"
+                        android:id="@+id/sagmentedGroup"
+                        app:borderColor="@color/colorDarkGray"
+                        android:dividerPadding="@dimen/margin_8"
+                        app:rippleColor="@color/colorPrimary"
+                        app:selectedBackground="@color/colorPrimaryDark"
+                        app:ripple="true"
+                        app:radius="0dp"
+                        app:background="@android:color/white"
+                        app:dividerWidth="1dp"
+                        android:showDividers="beginning"
+                        android:elevation="2dp"
+                        app:borderWidth="1dp"
+                        android:layout_height="@dimen/dp_50">
+
+                        <com.addisonelliott.segmentedbutton.SegmentedButton
+                            android:layout_width="match_parent"
+                            app:text="Assigned"
+                            app:textSize="@dimen/margin_13"
+                            app:selectedTextColor="@android:color/white"
+                            app:textColor="@color/colorDarkGray"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/dp_50" />
+
+                        <com.addisonelliott.segmentedbutton.SegmentedButton
+                            android:layout_width="match_parent"
+                            app:text="Closed"
+                            app:textSize="@dimen/margin_13"
+                            android:layout_weight="1"
+                            app:selectedTextColor="@android:color/white"
+                            app:textColor="@color/colorDarkGray"
+                            android:layout_height="@dimen/dp_50" />
+
+                        <!--       <com.addisonelliott.segmentedbutton.SegmentedButton
+                                   android:layout_width="match_parent"
+                                   app:text="SAVED ITEMS"
+                                   app:textSize="@dimen/margin_13"
+                                   android:layout_weight="1"
+                                   app:selectedTextColor="@android:color/white"
+                                   app:textColor="@color/colorDarkGray"
+                                   android:layout_height="35dp" /> -->
+
+                    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+
+                </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>
+
+</layout>
+

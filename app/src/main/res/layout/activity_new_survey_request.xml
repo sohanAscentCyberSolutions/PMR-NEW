@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.NewSurveyRequest">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <ImageView
+                    android:id="@+id/backBt"
+                    android:padding="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:src="@drawable/ic_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:tint="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Survey Request"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_toRightOf="@+id/backBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_below="@+id/toolbar"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cornerRadius="0dp"
+                    android:layout_margin="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+
+                    <LinearLayout
+                        android:padding="@dimen/margin_10"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:foregroundTint="@color/colorDarkGray"
+                            android:textColor="@color/colorDarkGray"
+                            app:boxStrokeColor="@color/colorDarkGray"
+                            android:textColorHint="@color/colorDarkGray">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:id="@+id/etEnquiry"
+                                android:text=""
+                                android:enabled="false"
+                                android:inputType="textMultiLine"
+                                android:textSize="@dimen/margin_13"
+                                android:foregroundTint="@color/colorDarkGray"
+                                android:textColor="@color/colorDarkGray"
+                                android:textColorHint="@color/colorDarkGray"
+                                android:singleLine="false"
+                                android:imeOptions="actionNext"
+                                android:layout_height="wrap_content"
+                                android:hint="Enquiry" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:foregroundTint="@color/colorDarkGray"
+                            android:textColor="@color/colorDarkGray"
+                            app:boxStrokeColor="@color/colorDarkGray"
+                            android:textColorHint="@color/colorDarkGray">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:maxLines="1"
+                                android:id="@+id/etBranch"
+                                android:text=""
+                                android:focusable="false"
+                                android:textSize="@dimen/margin_13"
+                                android:foregroundTint="@color/colorDarkGray"
+                                android:textColor="@color/colorDarkGray"
+                                android:textColorHint="@color/colorDarkGray"
+                                android:singleLine="true"
+                                android:imeOptions="actionNext"
+                                android:layout_height="wrap_content"
+                                android:hint="Branch *" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:foregroundTint="@color/colorDarkGray"
+                            android:textColor="@color/colorDarkGray"
+                            app:boxStrokeColor="@color/colorDarkGray"
+                            android:textColorHint="@color/colorDarkGray">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:maxLines="1"
+                                android:id="@+id/etsurveyor"
+                                android:text=""
+                                android:focusable="false"
+                                android:textSize="@dimen/margin_13"
+                                android:foregroundTint="@color/colorDarkGray"
+                                android:textColor="@color/colorDarkGray"
+                                android:textColorHint="@color/colorDarkGray"
+                                android:singleLine="true"
+                                android:imeOptions="actionNext"
+                                android:layout_height="wrap_content"
+                                android:hint="Surveyor *" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                               android:layout_weight="1"
+                                android:focusableInTouchMode="false"
+                                android:layout_height="wrap_content"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:foregroundTint="@color/colorDarkGray"
+                                android:textColor="@color/colorDarkGray"
+                                app:boxStrokeColor="@color/colorDarkGray"
+                                android:textColorHint="@color/colorDarkGray">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:maxLines="1"
+                                    android:focusableInTouchMode="false"
+                                    android:id="@+id/etFromDate"
+                                    android:text=""
+                                    android:focusable="false"
+                                    android:textSize="@dimen/margin_13"
+                                    android:foregroundTint="@color/colorDarkGray"
+                                    android:textColor="@color/colorDarkGray"
+                                    android:textColorHint="@color/colorDarkGray"
+                                    android:singleLine="true"
+                                    android:imeOptions="actionNext"
+                                    android:layout_height="wrap_content"
+                                    android:hint="From Date *" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:foregroundTint="@color/colorDarkGray"
+                                android:textColor="@color/colorDarkGray"
+                                app:boxStrokeColor="@color/colorDarkGray"
+                                android:textColorHint="@color/colorDarkGray">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:maxLines="1"
+                                    android:id="@+id/etFromTime"
+                                    android:text=""
+                                    android:focusable="false"
+                                    android:textSize="@dimen/margin_13"
+                                    android:foregroundTint="@color/colorDarkGray"
+                                    android:textColor="@color/colorDarkGray"
+                                    android:textColorHint="@color/colorDarkGray"
+                                    android:singleLine="true"
+                                    android:imeOptions="actionNext"
+                                    android:layout_height="wrap_content"
+                                    android:hint="From Time *" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:foregroundTint="@color/colorDarkGray"
+                                android:textColor="@color/colorDarkGray"
+                                app:boxStrokeColor="@color/colorDarkGray"
+                                android:textColorHint="@color/colorDarkGray">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:maxLines="1"
+                                    android:id="@+id/etToDate"
+                                    android:text=""
+                                    android:focusable="false"
+                                    android:textSize="@dimen/margin_13"
+                                    android:foregroundTint="@color/colorDarkGray"
+                                    android:textColor="@color/colorDarkGray"
+                                    android:textColorHint="@color/colorDarkGray"
+                                    android:singleLine="true"
+                                    android:imeOptions="actionNext"
+                                    android:layout_height="wrap_content"
+                                    android:hint="To Date*" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:foregroundTint="@color/colorDarkGray"
+                                android:textColor="@color/colorDarkGray"
+                                app:boxStrokeColor="@color/colorDarkGray"
+                                android:textColorHint="@color/colorDarkGray">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:maxLines="1"
+                                    android:id="@+id/etToTime"
+                                    android:text=""
+                                    android:focusable="false"
+                                    android:textSize="@dimen/margin_13"
+                                    android:foregroundTint="@color/colorDarkGray"
+                                    android:textColor="@color/colorDarkGray"
+                                    android:textColorHint="@color/colorDarkGray"
+                                    android:singleLine="true"
+                                    android:imeOptions="actionNext"
+                                    android:layout_height="wrap_content"
+                                    android:hint="To Time *" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                        <DatePicker
+                           android:layout_marginTop="@dimen/dp_16"
+                            android:headerBackground="@color/colorPrimaryDark"
+                            android:fitsSystemWindows="true"
+                            android:background="@color/white"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/date_picker"
+                            android:layout_width="wrap_content"
+                            android:calendarViewShown="true"
+                            android:spinnersShown="true"
+                            android:layout_height="wrap_content" />
+
+                        <TimePicker
+                            android:headerBackground="@color/colorPrimaryDark"
+                            android:background="@color/white"
+                            android:id="@+id/time_picker"
+                            android:layout_weight="4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:id="@+id/btSubmit"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Submit"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_nag40" />
+
+
+
+            </LinearLayout>
+
+
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</layout>

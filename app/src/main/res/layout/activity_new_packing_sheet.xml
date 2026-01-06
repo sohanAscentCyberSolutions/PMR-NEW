@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".OperationSupervisor.NewPackingSheet">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_nag45">
+
+
+
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <ImageView
+                    app:tint="@color/white"
+                    android:id="@+id/backBt"
+                    android:padding="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:src="@drawable/ic_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="New Packing List"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_toRightOf="@+id/backBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:background="@color/white"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_margin="@dimen/margin_10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Packing Items"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                    <Button
+                        android:id="@+id/btViewSymboles"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:textSize="@dimen/margin_10"
+                        android:textColor="@color/white"
+                        android:text="View Symbols"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_30"></Button>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="@dimen/margin_15"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="@dimen/margin_15"
+                    app:cardCornerRadius="@dimen/margin_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_margin="@dimen/margin_15"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/placeHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <Button
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="Add More"
+                        android:id="@+id/btAddmore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                   android:layout_margin="@dimen/margin_15"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:foregroundTint="@color/colorDarkGray"
+                    android:textColor="@color/colorDarkGray"
+                    app:boxStrokeColor="@color/colorDarkGray"
+                    android:textColorHint="@color/colorDarkGray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:maxLines="1"
+                        android:id="@+id/etRemarks"
+                        android:text=""
+                        android:textSize="@dimen/margin_13"
+                        android:foregroundTint="@color/colorDarkGray"
+                        android:textColor="@color/colorDarkGray"
+                        android:textColorHint="@color/colorDarkGray"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:hint="Remarks *" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/surveyInfoSignature"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:text="Shipper (Owner or Authorized Agent) Signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.github.gcacace.signaturepad.views.SignaturePad
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/signature_padShipper"
+                            android:layout_margin="@dimen/dp_10"
+                            android:background="@color/placeholder_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            app:penColor="@android:color/black"
+                            />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/signatureImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"/>
+
+
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:id="@+id/btSaveSign"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Save"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/margin_nag40" />
+
+                            <Button
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:id="@+id/btClearSign"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Clear"
+                                android:backgroundTint="@color/colorAccent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/margin_nag40" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:text="Contractor, Carrier or Authorized Agent(Driver) Signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.github.gcacace.signaturepad.views.SignaturePad
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/signature_padContractor"
+                            android:layout_margin="@dimen/dp_10"
+                            android:background="@color/placeholder_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            app:penColor="@android:color/black"
+                            />
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/signatureImageSurveyor"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"/>
+
+
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:id="@+id/btSaveSignSurveyor"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Save"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/margin_nag40" />
+
+                            <Button
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:id="@+id/btClearSignSurveyor"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="Clear"
+                                android:backgroundTint="@color/colorAccent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/margin_nag40" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/grey"
+                    android:text="Save List"
+                    android:id="@+id/btSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

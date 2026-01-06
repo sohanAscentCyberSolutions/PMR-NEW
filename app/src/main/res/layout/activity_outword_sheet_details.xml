@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".OperationSupervisor.JobOutwardSheetDetails">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/htab_collapse_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:minHeight="10dp"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:titleEnabled="false">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="top"
+                    android:minHeight="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:background="@color/colorPrimaryDark"
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_gravity="right"
+
+                        android:minHeight="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                        <ImageView
+                            app:tint="@color/white"
+                            android:id="@+id/backBt"
+                            android:padding="4dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:src="@drawable/ic_back"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/backBt"
+                            android:gravity="right"
+                            android:id="@+id/title"
+                            android:textSize="18dp"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="@android:color/white"
+                            android:text="Outward Sheet Details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        app:cornerRadius="0dp"
+                        android:background="@color/v_light_grey"
+                        android:id="@+id/cardNewInquiries"
+                        app:cardBackgroundColor="@color/v_light_grey"
+                        android:layout_margin="@dimen/margin_8"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Job Number:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/jobNumber"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Outward Date:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/outwardDate"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Prepared By:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/preparedBy"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Transport/Shipping Co:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/transportShippingCo"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Shipping/Custom/Truck Seal No:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/ShippingCustomTruckSealNo"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Truck Container No:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/truckContainerNo"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Lift Van Nos:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/liftVanNos"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_toLeftOf="@+id/tvViewMore"
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Crate(s) Nos:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/crateNos"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Total Packets:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/totalPackets"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Account:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/account"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Shipper Name:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/shipperName"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Mobile Number"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/mobileNumber"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text=""
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Origin Address:"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/originAddress"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text="City Name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:weightSum="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="Destination Address"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:id="@+id/destinationAddress"
+                                        android:textSize="@dimen/margin_13"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorDarkGray"
+                                        android:text=""
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_above="@+id/sagmentedGroup"
+                android:layout_below="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reclycalView"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:layoutAnimation="@anim/layout_animation_fall_down"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/cardSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+                <LinearLayout
+                    android:layout_margin="@dimen/margin_10"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/margin_13"
+                            android:textColor="@color/black"
+                            android:text="Supervisor Signature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageView
+                            android:id="@+id/ivSupervisorSignature"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_120" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/margin_13"
+                            android:textColor="@color/black"
+                            android:text="WareHouseManager Signature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageView
+                            android:id="@+id/ivWareHouseManagerSign"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_120" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

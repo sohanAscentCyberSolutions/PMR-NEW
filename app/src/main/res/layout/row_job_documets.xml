@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/layDt"
+        android:paddingBottom="@dimen/margin_5"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:padding="@dimen/margin_1"
+                android:background="@drawable/borderdview"
+                android:id="@+id/ivDocument"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_120"/>
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin_8"
+                android:layout_weight=".77"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:textStyle="bold"
+                    android:id="@+id/tvDocumentName"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/margin_15"
+                    android:text="Root for west pune"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_below="@+id/tvDocumentName"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tvDesc"
+                    android:textColor="@color/grey"
+                    android:textSize="13dp"
+                    android:text="Root for west pune"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginLeft="@dimen/sp_18"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"/>
+
+
+</RelativeLayout>

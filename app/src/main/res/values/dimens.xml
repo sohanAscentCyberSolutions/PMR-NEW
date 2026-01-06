@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="sp_18">18dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="sp_16">16dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="margin_13">13dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_nag25">25dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_nag20">20dp</dimen>
+    <dimen name="margin_nag40">40dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_nag35">35dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_nag130">130dp</dimen>
+    <dimen name="margin_nag45">45dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
+</resources>

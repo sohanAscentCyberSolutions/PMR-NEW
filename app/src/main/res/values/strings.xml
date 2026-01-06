@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">PMR App</string>
+
+
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Assigned Request</item>
+        <item>Completed Process</item>
+    </array>
+    <string name="title_activity_custom_date_picker">Choose Date &amp; Time</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string-array name="survey_type">
+        <item>HOUSE_HOLD_GOODS</item>
+        <item>OFFICE_GOODS</item>
+    </string-array>
+
+    <string-array name="org_dst_type">
+        <item>Elevator</item>
+        <item>Stair Carry</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="quote_required">
+        <item>FCL</item>
+        <item>LCL</item>
+        <item>Part Load</item>
+        <item>D-T-D</item>
+        <item>D-T-P</item>
+    </string-array>
+
+    <string-array name="mode">
+        <item>SEA</item>
+        <item>AIR</item>
+        <item>ROAD</item>
+    </string-array>
+    <string-array name="inquirySource">
+        <item>Paper Advert.</item>
+        <item>Website</item>
+        <item>TVC</item>
+        <item>Radio Promotion</item>
+        <item>Banner/Hoardings</item>
+        <item>Friend Relative</item>
+        <item>Colleague</item>
+        <item>Tollfree</item>
+        <item>Campaign</item>
+        <item>Corporate Client</item>
+        <item>Old Customer</item>
+        <item>Linked-in</item>
+        <item>Facebook</item>
+        <item>Tweeter</item>
+        <item>Magazine</item>
+    </string-array>
+    <string-array name="inquiryType">
+        <item>Individual</item>
+        <item>Corporate</item>
+        <item>Agent</item>
+    </string-array>
+
+    <string-array name="movementType">
+        <item>Domestic</item>
+        <item>International</item>
+    </string-array>
+
+    <string-array name="goodsType">
+        <item>House hold Goods</item>
+        <item>Office Goods</item>
+        <item>Commercial Goods</item>
+        <item>Fine Arts</item>
+        <item>IT Goods</item>
+        <item>Automobile</item>
+        <item>Pet</item>
+    </string-array>
+
+    <string-array name="serviceType">
+        <item>Interstate Move</item>
+        <item>Export Move</item>
+        <item>Import Move</item>
+        <item>Storage</item>
+        <item>Local Moving</item>
+        <item>Packing Only</item>
+        <item>Transport Only</item>
+    </string-array>
+
+    <string-array name="deliveryType">
+        <item>NA</item>
+        <item>DTD - Export</item>
+        <item>DTP - Export</item>
+        <item>DTD - Import</item>
+        <item>PTD - Import</item>
+    </string-array>
+
+</resources>

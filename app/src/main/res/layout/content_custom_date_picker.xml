@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <ScrollView
+        android:layout_above="@+id/date_time_set"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+
+            <DatePicker
+                android:headerBackground="@color/colorPrimaryDark"
+                android:fitsSystemWindows="true"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/date_picker"
+                android:layout_width="wrap_content"
+                android:calendarViewShown="true"
+                android:spinnersShown="true"
+                android:layout_height="wrap_content" />
+
+            <TimePicker
+                android:headerBackground="@color/colorPrimaryDark"
+                android:background="@color/white"
+                android:id="@+id/time_picker"
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/date_time_set"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:text="Choose"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

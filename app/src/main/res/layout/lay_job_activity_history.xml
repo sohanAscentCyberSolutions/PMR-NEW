@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layContacts"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@color/v_light_grey"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_nag35">
+
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+                <View
+                    android:background="@color/black"
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Activity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+                <View
+                    android:background="@color/black"
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Perform By"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/activityHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</layout>

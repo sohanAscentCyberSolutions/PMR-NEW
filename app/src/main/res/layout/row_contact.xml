@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:padding="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/colorAccentTrans"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:foregroundTint="@color/colorDarkGray"
+                android:textColor="@color/colorDarkGray"
+                app:boxStrokeColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorDarkGray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:id="@+id/etContactPerson"
+                    android:text=""
+                    android:textSize="@dimen/margin_13"
+                    android:foregroundTint="@color/colorDarkGray"
+                    android:textColor="@color/colorDarkGray"
+                    android:textColorHint="@color/colorDarkGray"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact Person *" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:foregroundTint="@color/colorDarkGray"
+                android:textColor="@color/colorDarkGray"
+                app:boxStrokeColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorDarkGray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:id="@+id/etEmail"
+                    android:text=""
+                    android:textSize="@dimen/margin_13"
+                    android:foregroundTint="@color/colorDarkGray"
+                    android:textColor="@color/colorDarkGray"
+                    android:textColorHint="@color/colorDarkGray"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content"
+                    android:hint="Email *" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@+id/ivDelete"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:foregroundTint="@color/colorDarkGray"
+                android:textColor="@color/colorDarkGray"
+                app:boxStrokeColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorDarkGray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:id="@+id/etContactnumber"
+                    android:text=""
+                    android:inputType="numberSigned"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:textSize="@dimen/margin_13"
+                    android:foregroundTint="@color/colorDarkGray"
+                    android:textColor="@color/colorDarkGray"
+                    android:textColorHint="@color/colorDarkGray"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact number *" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/ivDelete"
+                android:layout_centerVertical="true"
+                android:src="@drawable/delete"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"/>
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:foregroundTint="@color/colorDarkGray"
+            android:textColor="@color/colorDarkGray"
+            app:boxStrokeColor="@color/colorDarkGray"
+            android:textColorHint="@color/colorDarkGray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:id="@+id/etDesignation"
+                android:text=""
+                android:inputType="text"
+                android:layout_marginRight="@dimen/margin_8"
+                android:textSize="@dimen/margin_13"
+                android:foregroundTint="@color/colorDarkGray"
+                android:textColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorDarkGray"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:layout_height="wrap_content"
+                android:hint="Designation" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
